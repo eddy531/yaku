@@ -1,4 +1,4 @@
-from django.contrib import admin
+from django.contrib import admin # type: ignore
 from .models import Asistencia, Comunicado, Configuracion, Consumo, Detalle, Evento, Excedente, HistorialPropietario, Impuesto, Lectura, Medidor, Perfil, Recaudacion, Ruta, Socio, Tarifa, TipoEvento, Usuario
 # Register your models here.
 admin.site.register(Asistencia)

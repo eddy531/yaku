@@ -1,0 +1,32 @@
+// filepath: /home/eddy/Documentos/yaku/Aplications/Organization/templates/comunicado_list.html
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center mb-4">Listado de Comunicados</h2>
+
+    <!-- Tabla de comunicados -->
+    <table class="table table-border table-striped table-hover" id="tbl-comunicados">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha</th>
+                <th>Mensaje</th>
+                <th>Actualización</th>
+                <th>Creación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comunicado in comunicados %}
+            <tr>
+                <td>{{ comunicado.id_com }}</td>
+                <td>{{ comunicado.fecha_com }}</td>
+                <td>{{ comunicado.mensaje_com }}</td>
+                <td>{{ comunicado.actualizacion_com }}</td>
+                <td>{{ comunicado.creacion_com }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
